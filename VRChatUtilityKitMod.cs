@@ -3,19 +3,16 @@ using MelonLoader;
 using VRChatUtilityKit.Ui;
 using VRChatUtilityKit.Utilities;
 
-[assembly: MelonInfo(typeof(VRChatUtilityKit.VRChatUtilityKitMod), "VRChatUtilityKit", "1.0.3", "loukylor", "https://github.com/loukylor/VRC-Mods")]
-[assembly: MelonGame("VRChat", "VRChat")]
-[assembly: MelonPriority(-100)]
 
 #pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
 
 namespace VRChatUtilityKit
 {
-    public class VRChatUtilityKitMod : MelonMod
+    public class VRChatUtilityKitMod
     {
         internal static VRChatUtilityKitMod Instance { get; private set; }
 
-        public override void OnApplicationStart()
+        public void OnApplicationStart()
         {
             MelonLogger.Msg("Initializing...");
             Instance = this;
@@ -32,7 +29,7 @@ namespace VRChatUtilityKit
             VRCUtils.UiInit();
         }
 
-        public override void OnUpdate()
+        public void OnUpdate()
         {
             if (AsyncUtils._toMainThreadQueue.TryDequeue(out Action result))
                 result.Invoke();
