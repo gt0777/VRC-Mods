@@ -100,6 +100,7 @@ namespace VRChatUtilityKit.Utilities
         // Completely stolen from Psychloor's PlayerRotator (https://github.com/Psychloor/PlayerRotater)
         private static IEnumerator StartEmmCheck(ApiWorld world)
         {
+/*
             // Check if black/whitelisted from emmVRC - thanks Emilia and the rest of emmVRC Staff
             WWW www = new WWW($"https://dl.emmvrc.com/riskyfuncs.php?worldid={world.id}", null, new Dictionary<string, string>());
             while (!www.isDone)
@@ -121,6 +122,7 @@ namespace VRChatUtilityKit.Utilities
                         yield break;
                 }
             }
+*/
 
             // no result from server or they're currently down
             // Check tags/GameObjects then.
