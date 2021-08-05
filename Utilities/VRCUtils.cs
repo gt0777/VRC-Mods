@@ -151,7 +151,7 @@ namespace VRChatUtilityKit.Utilities
             AreRiskyFunctionsAllowed = true;
         }
 
-        /// <summary>
+        /*/// <summary>
         /// Returns whether the given user's avatar is explicity shown.
         /// </summary>
         /// <param name="user">The user to check</param>
@@ -179,7 +179,7 @@ namespace VRChatUtilityKit.Utilities
                         return true;
 
             return false;
-        }
+        }*/
 
         /// <summary>
         /// Reloads all avatars.
